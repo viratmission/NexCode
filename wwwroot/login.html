@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in · MatchPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/forms.css" />
+    <link rel="stylesheet" href="/css/authentication.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body class="auth-body">
+    <div class="auth-layout">
+        <section class="auth-panel">
+            <div class="auth-card">
+                <a class="auth-brand" href="/index.html">
+                    <span class="auth-brand__logo" aria-hidden="true">M</span>
+                    <span class="auth-brand__name">MatchPoint</span>
+                </a>
+
+                <h1 class="auth-heading">Welcome back</h1>
+                <p class="auth-subheading">Sign in to continue matching with the right opportunities.</p>
+
+                <div id="loginAlert" class="alert alert--danger mb-4 hidden" role="alert"></div>
+
+                <form class="auth-form" id="loginForm" novalidate>
+                    <div class="form-field">
+                        <label class="form-label" for="email">
+                            Email address <span class="form-label__required">*</span>
+                        </label>
+                        <div class="input-group">
+                            <svg class="input-group__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 6L2 7" /></svg>
+                            <input class="form-control" type="email" id="email" name="email"
+                                   placeholder="you@example.com" autocomplete="email" required />
+                        </div>
+                        <span class="form-error" data-error-for="email"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="password">
+                            Password <span class="form-label__required">*</span>
+                        </label>
+                        <div class="input-group">
+                            <svg class="input-group__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                            <input class="form-control" type="password" id="password" name="password"
+                                   placeholder="Enter your password" autocomplete="current-password" required />
+                            <button type="button" class="input-group__action" data-toggle-password="password"
+                                    aria-label="Show password"></button>
+                        </div>
+                        <span class="form-error" data-error-for="password"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--lg btn--block" id="loginSubmit">
+                        Sign in
+                    </button>
+                </form>
+
+                <p class="auth-footer">
+                    New to MatchPoint? <a href="/register.html">Create an account</a>
+                </p>
+
+                <div class="auth-demo">
+                    <div class="auth-demo__title">Demo accounts &mdash; click to fill</div>
+                    <div class="auth-demo__list">
+                        <button type="button" class="auth-demo__item" data-demo-email="maya@demo.com" data-demo-password="Password123!">
+                            <span class="auth-demo__role">Job Seeker</span>
+                            <span>maya@demo.com</span>
+                        </button>
+                        <button type="button" class="auth-demo__item" data-demo-email="hr@demo.com" data-demo-password="Password123!">
+                            <span class="auth-demo__role">Employer</span>
+                            <span>hr@demo.com</span>
+                        </button>
+                        <button type="button" class="auth-demo__item" data-demo-email="admin@demo.com" data-demo-password="Password123!">
+                            <span class="auth-demo__role">Administrator</span>
+                            <span>admin@demo.com</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="auth-showcase">
+            <div class="auth-showcase__content">
+                <span class="auth-showcase__eyebrow">Skill based matching</span>
+                <h2 class="auth-showcase__title">Every application, scored on what actually matters.</h2>
+                <p class="auth-showcase__text">
+                    MatchPoint compares profiles and vacancies across four weighted dimensions and shows the full
+                    breakdown to both sides.
+                </p>
+
+                <div class="auth-showcase__features">
+                    <div class="auth-showcase__feature">
+                        <span class="auth-showcase__feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
+                        </span>
+                        <div>
+                            <div class="auth-showcase__feature-title">Skills weighted at 60%</div>
+                            <div class="auth-showcase__feature-text">The strongest signal of whether you can do the job.</div>
+                        </div>
+                    </div>
+
+                    <div class="auth-showcase__feature">
+                        <span class="auth-showcase__feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>
+                        </span>
+                        <div>
+                            <div class="auth-showcase__feature-title">See the gap, close the gap</div>
+                            <div class="auth-showcase__feature-text">Missing skills are listed on every job you view.</div>
+                        </div>
+                    </div>
+
+                    <div class="auth-showcase__feature">
+                        <span class="auth-showcase__feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /></svg>
+                        </span>
+                        <div>
+                            <div class="auth-showcase__feature-title">You control contact</div>
+                            <div class="auth-showcase__feature-text">Employers must request permission before reaching out.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script defer src="/js/config/apiConfig.js"></script>
+    <script defer src="/js/utilities/formatters.js"></script>
+    <script defer src="/js/utilities/validators.js"></script>
+    <script defer src="/js/utilities/domHelpers.js"></script>
+    <script defer src="/js/auth/tokenManager.js"></script>
+    <script defer src="/js/components/toast.js"></script>
+    <script defer src="/js/services/apiClient.js"></script>
+    <script defer src="/js/services/authService.js"></script>
+    <script defer src="/js/auth/authGuard.js"></script>
+    <script defer src="/js/pages/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@Smart_team_project_HostAddress = http://localhost:5204
+
+GET {{Smart_team_project_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

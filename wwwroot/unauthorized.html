@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Session expired · MatchPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/authentication.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body class="auth-body">
+    <main class="status-page">
+        <div class="status-card">
+            <div class="status-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+            </div>
+            <div class="status-card__code">401 &middot; Unauthorized</div>
+            <h1 class="status-card__title">Your session has expired</h1>
+            <p class="status-card__text">
+                For your security we sign you out after a period of inactivity. Sign in again to pick up right
+                where you left off.
+            </p>
+            <div class="status-card__actions">
+                <a class="btn btn--primary btn--lg" id="signInLink" href="/login.html">Sign in again</a>
+                <a class="btn btn--secondary btn--lg" href="/index.html">Back to home</a>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="/js/config/apiConfig.js"></script>
+    <script defer src="/js/utilities/formatters.js"></script>
+    <script defer src="/js/utilities/domHelpers.js"></script>
+    <script defer src="/js/auth/tokenManager.js"></script>
+    <script defer src="/js/pages/unauthorized.js"></script>
+</body>
+</html>

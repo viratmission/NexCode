@@ -1,0 +1,262 @@
+/* MatchPoint responsive rules */
+
+@media (max-width: 1280px) {
+    .stat-grid--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1180px) {
+    .grid--sidebar,
+    .grid--sidebar-left {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .sticky-aside {
+        position: static;
+    }
+
+    .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .stat-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1024px) {
+    .auth-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .auth-showcase {
+        display: none;
+    }
+
+    .auth-panel {
+        padding: var(--space-8) var(--space-5);
+        background: var(--color-bg);
+    }
+
+    .auth-card,
+    .auth-card--wide {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-sm);
+        padding: var(--space-8) var(--space-6);
+    }
+
+    .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .landing-hero__title { font-size: var(--fs-4xl); }
+}
+
+/* ---------- Sidebar becomes a drawer ---------- */
+
+@media (max-width: 960px) {
+    .sidebar {
+        transform: translateX(-100%);
+        box-shadow: var(--shadow-xl);
+    }
+
+    body.sidebar-open .sidebar {
+        transform: translateX(0);
+    }
+
+    .app-main {
+        margin-left: 0;
+    }
+
+    .app-header {
+        padding: 0 var(--space-5);
+    }
+
+    .app-header__menu {
+        display: inline-flex;
+    }
+
+    .app-content {
+        padding: var(--space-6) var(--space-5);
+    }
+
+    .header-user__meta {
+        display: none;
+    }
+
+    .header-user {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .welcome-banner {
+        padding: var(--space-6);
+    }
+}
+
+@media (max-width: 840px) {
+    .grid--2,
+    .grid--3,
+    .grid--4 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .detail-list--2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .stat-grid,
+    .stat-grid--3,
+    .stat-grid--5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .job-card {
+        flex-direction: column;
+    }
+
+    .job-card__side {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --header-height: 62px;
+    }
+
+    .app-content {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-header__actions .btn {
+        flex: 1;
+    }
+
+    .stat-grid,
+    .stat-grid--3,
+    .stat-grid--5 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .stat-card__value { font-size: var(--fs-2xl); }
+
+    .card__header,
+    .card__body {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .card__footer {
+        padding: var(--space-4);
+    }
+
+    .activity-item,
+    .notification-item {
+        padding: var(--space-4);
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: var(--space-3);
+    }
+
+    .toast-container {
+        top: auto;
+        bottom: var(--space-4);
+        left: var(--space-4);
+        right: var(--space-4);
+        width: auto;
+    }
+
+    .modal-backdrop {
+        padding: var(--space-4);
+        align-items: flex-end;
+    }
+
+    .modal {
+        max-height: calc(100vh - 40px);
+    }
+
+    .modal__header,
+    .modal__body {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .modal__footer {
+        padding: var(--space-4);
+        flex-direction: column-reverse;
+    }
+
+    .modal__footer .btn { width: 100%; }
+
+    .role-options { grid-template-columns: minmax(0, 1fr); }
+
+    .form-actions { flex-direction: column-reverse; }
+    .form-actions .btn { width: 100%; }
+
+    .landing-hero {
+        padding: var(--space-12) var(--space-4) var(--space-8);
+    }
+
+    .landing-hero__title { font-size: var(--fs-3xl); }
+    .landing-hero__text { font-size: var(--fs-md); }
+    .landing-hero__actions .btn { width: 100%; }
+
+    .landing-nav__inner { padding: var(--space-3) var(--space-4); }
+    .landing-section { padding: var(--space-8) var(--space-4); }
+    .landing-section__title { font-size: var(--fs-2xl); }
+
+    .status-card { padding: var(--space-8) var(--space-5); }
+    .status-card__actions .btn { width: 100%; }
+
+    .applicant-card {
+        flex-wrap: wrap;
+    }
+
+    .applicant-card__side {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .auth-heading { font-size: var(--fs-2xl); }
+
+    .pagination {
+        justify-content: center;
+    }
+
+    .pagination__summary { width: 100%; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .profile-hero { padding: var(--space-5) var(--space-4); }
+    .welcome-banner { padding: var(--space-5); }
+    .welcome-banner__title { font-size: var(--fs-xl); }
+    .welcome-banner__actions { width: 100%; }
+    .welcome-banner__actions .btn { flex: 1; }
+    .completion-widget { min-width: 100%; }
+}
+
+@media print {
+    .sidebar,
+    .app-header,
+    .toast-container,
+    .page-header__actions,
+    .btn {
+        display: none !important;
+    }
+
+    .app-main { margin-left: 0; }
+    body { background: #fff; }
+    .card { box-shadow: none; border-color: #ddd; }
+}

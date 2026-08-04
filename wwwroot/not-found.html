@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found · MatchPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/authentication.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body class="auth-body">
+    <main class="status-page">
+        <div class="status-card">
+            <div class="status-card__icon status-card__icon--info">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+            </div>
+            <div class="status-card__code">404 &middot; Not found</div>
+            <h1 class="status-card__title">We could not find that page</h1>
+            <p class="status-card__text" id="notFoundMessage">
+                The page you were looking for may have been moved, closed or never existed. Check the address, or
+                head back to somewhere familiar.
+            </p>
+            <div class="status-card__actions">
+                <a class="btn btn--primary btn--lg" id="homeLink" href="/index.html">Back to home</a>
+                <button type="button" class="btn btn--secondary btn--lg" id="backButton">Go back</button>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="/js/config/apiConfig.js"></script>
+    <script defer src="/js/utilities/formatters.js"></script>
+    <script defer src="/js/utilities/domHelpers.js"></script>
+    <script defer src="/js/auth/tokenManager.js"></script>
+    <script defer src="/js/pages/notFound.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard · MatchPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/forms.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body class="app-body auth-pending">
+    <div class="app-shell">
+        <div id="sidebar"></div>
+
+        <div class="app-main">
+            <div id="header"></div>
+
+            <main class="app-content">
+                <div id="dashboardBanner"></div>
+
+                <div class="stat-grid" id="dashboardStats"></div>
+
+                <div class="grid grid--sidebar">
+                    <section class="card" id="recommendedCard">
+                        <div class="card__header">
+                            <div>
+                                <h2 class="card__title">Recommended for you</h2>
+                                <p class="card__subtitle">Open vacancies ranked by how well they match your profile</p>
+                            </div>
+                            <a class="btn btn--secondary btn--sm" href="/jobseeker/jobs.html">Browse all jobs</a>
+                        </div>
+                        <div id="recommendedJobs"></div>
+                    </section>
+
+                    <aside class="sticky-aside">
+                        <section class="card">
+                            <div class="card__header">
+                                <div>
+                                    <h2 class="card__title">Recent applications</h2>
+                                    <p class="card__subtitle">Your latest submissions</p>
+                                </div>
+                            </div>
+                            <div id="recentApplications"></div>
+                            <div class="card__footer">
+                                <a class="btn btn--ghost btn--sm" href="/jobseeker/applications.html">View all applications</a>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script defer src="/js/config/apiConfig.js"></script>
+    <script defer src="/js/utilities/formatters.js"></script>
+    <script defer src="/js/utilities/validators.js"></script>
+    <script defer src="/js/utilities/domHelpers.js"></script>
+    <script defer src="/js/auth/tokenManager.js"></script>
+    <script defer src="/js/components/toast.js"></script>
+    <script defer src="/js/components/loader.js"></script>
+    <script defer src="/js/components/modal.js"></script>
+    <script defer src="/js/components/statusBadge.js"></script>
+    <script defer src="/js/components/matchScore.js"></script>
+    <script defer src="/js/components/pagination.js"></script>
+    <script defer src="/js/services/apiClient.js"></script>
+    <script defer src="/js/services/authService.js"></script>
+    <script defer src="/js/services/profileService.js"></script>
+    <script defer src="/js/services/jobService.js"></script>
+    <script defer src="/js/services/applicationService.js"></script>
+    <script defer src="/js/services/employerService.js"></script>
+    <script defer src="/js/services/contactRequestService.js"></script>
+    <script defer src="/js/services/notificationService.js"></script>
+    <script defer src="/js/services/adminService.js"></script>
+    <script defer src="/js/auth/authGuard.js"></script>
+    <script defer src="/js/auth/roleGuard.js"></script>
+    <script defer src="/js/components/sidebar.js"></script>
+    <script defer src="/js/components/header.js"></script>
+    <script defer src="/js/pages/jobseeker-dashboard.js"></script>
+</body>
+</html>

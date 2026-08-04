@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create an account · MatchPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/forms.css" />
+    <link rel="stylesheet" href="/css/authentication.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body class="auth-body">
+    <div class="auth-layout">
+        <section class="auth-panel">
+            <div class="auth-card auth-card--wide">
+                <a class="auth-brand" href="/index.html">
+                    <span class="auth-brand__logo" aria-hidden="true">M</span>
+                    <span class="auth-brand__name">MatchPoint</span>
+                </a>
+
+                <h1 class="auth-heading">Create your account</h1>
+                <p class="auth-subheading">Takes less than a minute. Choose how you will use MatchPoint.</p>
+
+                <div id="registerAlert" class="alert alert--danger mb-4 hidden" role="alert"></div>
+
+                <form class="auth-form" id="registerForm" novalidate>
+                    <div class="form-field">
+                        <span class="form-label">I am joining as <span class="form-label__required">*</span></span>
+                        <div class="role-options">
+                            <label class="role-option is-selected" data-role-option="JobSeeker">
+                                <input type="radio" name="role" value="JobSeeker" checked />
+                                <span class="role-option__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                </span>
+                                <span>
+                                    <span class="role-option__title">Job Seeker</span>
+                                    <span class="role-option__description">Find roles that match my skills</span>
+                                </span>
+                            </label>
+
+                            <label class="role-option" data-role-option="Employer">
+                                <input type="radio" name="role" value="Employer" />
+                                <span class="role-option__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" /><path d="M9 22v-4h6v4" /><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01" /></svg>
+                                </span>
+                                <span>
+                                    <span class="role-option__title">Employer</span>
+                                    <span class="role-option__description">Post vacancies and rank applicants</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="fullName">
+                            Full name <span class="form-label__required">*</span>
+                        </label>
+                        <input class="form-control" type="text" id="fullName" name="fullName"
+                               placeholder="Jane Doe" autocomplete="name" maxlength="150" required />
+                        <span class="form-error" data-error-for="fullName"></span>
+                    </div>
+
+                    <div class="form-field hidden" id="companyNameField">
+                        <label class="form-label" for="companyName">
+                            Company name <span class="form-label__required">*</span>
+                        </label>
+                        <input class="form-control" type="text" id="companyName" name="companyName"
+                               placeholder="Acme Technologies" autocomplete="organization" maxlength="200" />
+                        <span class="form-error" data-error-for="companyName"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="email">
+                            Email address <span class="form-label__required">*</span>
+                        </label>
+                        <input class="form-control" type="email" id="email" name="email"
+                               placeholder="you@example.com" autocomplete="email" maxlength="256" required />
+                        <span class="form-error" data-error-for="email"></span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label class="form-label" for="password">
+                                Password <span class="form-label__required">*</span>
+                            </label>
+                            <div class="input-group">
+                                <input class="form-control" type="password" id="password" name="password"
+                                       placeholder="At least 8 characters" autocomplete="new-password" required />
+                                <button type="button" class="input-group__action" data-toggle-password="password"
+                                        aria-label="Show password"></button>
+                            </div>
+                            <span class="form-error" data-error-for="password"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="form-label" for="confirmPassword">
+                                Confirm password <span class="form-label__required">*</span>
+                            </label>
+                            <div class="input-group">
+                                <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
+                                       placeholder="Repeat your password" autocomplete="new-password" required />
+                                <button type="button" class="input-group__action" data-toggle-password="confirmPassword"
+                                        aria-label="Show password"></button>
+                            </div>
+                            <span class="form-error" data-error-for="confirmPassword"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--lg btn--block" id="registerSubmit">
+                        Create account
+                    </button>
+                </form>
+
+                <p class="auth-footer">
+                    Already have an account? <a href="/login.html">Sign in</a>
+                </p>
+            </div>
+        </section>
+
+        <aside class="auth-showcase">
+            <div class="auth-showcase__content">
+                <span class="auth-showcase__eyebrow">Join MatchPoint</span>
+                <h2 class="auth-showcase__title">Stop guessing. Start matching.</h2>
+                <p class="auth-showcase__text">
+                    Build a skills profile once and MatchPoint scores you against every open vacancy automatically.
+                </p>
+
+                <div class="auth-showcase__features">
+                    <div class="auth-showcase__feature">
+                        <span class="auth-showcase__feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                        </span>
+                        <div>
+                            <div class="auth-showcase__feature-title">Free for job seekers</div>
+                            <div class="auth-showcase__feature-text">Unlimited applications, no hidden costs.</div>
+                        </div>
+                    </div>
+
+                    <div class="auth-showcase__feature">
+                        <span class="auth-showcase__feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                        </span>
+                        <div>
+                            <div class="auth-showcase__feature-title">Ranked shortlists for employers</div>
+                            <div class="auth-showcase__feature-text">Applicants arrive pre-sorted by fit.</div>
+                        </div>
+                    </div>
+
+                    <div class="auth-showcase__feature">
+                        <span class="auth-showcase__feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4L12 3Z" /></svg>
+                        </span>
+                        <div>
+                            <div class="auth-showcase__feature-title">Recommendations from day one</div>
+                            <div class="auth-showcase__feature-text">Your dashboard suggests roles as soon as you add skills.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script defer src="/js/config/apiConfig.js"></script>
+    <script defer src="/js/utilities/formatters.js"></script>
+    <script defer src="/js/utilities/validators.js"></script>
+    <script defer src="/js/utilities/domHelpers.js"></script>
+    <script defer src="/js/auth/tokenManager.js"></script>
+    <script defer src="/js/components/toast.js"></script>
+    <script defer src="/js/services/apiClient.js"></script>
+    <script defer src="/js/services/authService.js"></script>
+    <script defer src="/js/auth/authGuard.js"></script>
+    <script defer src="/js/pages/register.js"></script>
+</body>
+</html>
