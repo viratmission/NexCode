@@ -1,0 +1,7 @@
+Admin:->
+test@example.com
+test@123
+
+user:->
+frontendtest1@gmail.com
+test@123
